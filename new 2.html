@@ -7,11 +7,15 @@
 <script src="data.js"></script>
 </head>
 <body class="container">
-    <button type="button"  class="btn btn-success" onclick="show()">All Employee </button>
-    <button type="button" id="even" class="btn btn-success" onclick="odd()">ODD </button>
-    <button type="button" id="odd" class="btn btn-success" onclick="even()">even</button>
-    <button type="button" id="odd" class="btn btn-success" onclick="clear1()">clear</button>
-    <input type = "text"  placeholder = "Search..." oninput="search(this.value)">
+    <div class="row">
+        <input type="search" id="form1" placeholder="Search">
+        <button type="submit" class="btn btn-secondary" onclick="employee(3)">
+        <span><i class="fa fa-search" aria-hidden="true"></i></span></button>
+     </div>
+    <button type="button"  class="btn btn-success" onclick="employee(0)">All Employee </button>
+    <button type="button" id="even" class="btn btn-success" onclick="employee(1)">ODD </button>
+    <button type="button" id="odd" class="btn btn-success" onclick="employee(2)">even</button>
+    <button type="button" id="odd" class="btn btn-success" onclick="clearData()">clear</button>
    <div>
     <p id="demo"></p>
     </div>
