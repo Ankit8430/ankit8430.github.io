@@ -1,68 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
 </head>
-<body>
+
+<body >
     <div class="container">
-        <div class="card" style="width: 30rem;">
-            <div class="p-3 mb-2 bg-warning text-dark">
-                <div class="card-body">
-                    <h5 class="card-title">Salesforce training - 25-Feb-2022</h5>
-                    <p class="card-text">
-                    <ol>
-                        <h3>Today, I Learnt</h3>
-                        <li>Revision</li>
-                        <li>Create an App</li>
-                        <li>Create an Object ,field and relationship</li>
-                        <li>How to use field dependencies in projct.</li>
-                        <li>How to use a formula field?</li>
-                        <li>I learnt Predefined function</li>
-                        <li>How to display image using formula field?</li>
-                        <li>Got an assignment</li>
-                    </ol>
-                    </p>
+        <div class="row">
+            <div class="card" class="col-">
+                <div class="p-3 mb-2 bg-warning text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Salesforce training - 28-Feb-2022-Monday</h5>
+                        <p class="card-text">
+                        <ol>
+                            <li>Firstly,Today,Lecture started the <b>revision of previous</b></li>
+                            <li><b>After that , Lecture started with new concept</b></li>
+                            <li>Firstly,Ankita Ma'am started with <b>Object relationship</b></li>
+                            <ol type="i">
+                                <li><b>What is object relationship :</b>Object relationship is a a two-way association
+                                    between two objects</li>
+                                <li>Here mainly used
+                                    <ol type="a">
+                                        <li><b>One to many</b></li>
+                                        <li><b>Many to many</b></li>
+                                    </ol>
+                                </li>
+                                <li><b>What is a one to many relationship?:</b>One to many relationship is a example
+                                    <b>One CSE Department handle to whole student of Cse Department</b></li>
+                                <li><b>What is a many to many relationship?:</b>Many to Many relationship is a example
+                                    <b>One Person can purchase various products and products can be purchased by many
+                                        Person.</b></li>
+                            </ol>
+                            <li>Master-detail relationships<b>(MDR)</b>:</li>
+                            <ol type="i">
+                                <li><b>Department</b></li>
+                                <table class="table table-dark">
+                                    <thead>
+                                        <th scope="col">D_id</th>
+                                        <th scope="col">D_name</th>
+                                        <th scope="col">D_strength</th>
+                                    </thead>
+                                </table>
+                                <li><b>Employee</b></li>
+                                <table class="table table-dark">
+                                    <thead>
+                                        <th scope="col">E_id</th>
+                                        <th scope="col">E_name</th>
+                                        <th scope="col">D_id</th>
+                                    </thead>
+                                </table>
+                                <li>Both table connect as a relationship reference <b>D_id</b></li>
+                                <li><b>Error concept of <b>MDR</b>:</b></li>
+                                <ol type="a">
+                                    <li><b>Update:</b>If You update new Department in employee object but not update
+                                        Department table so it is a update error</li>
+                                    <li><b>Insert:</b>If You insert new Department in employee object but It's not
+                                        present a Department object so it's a insert error</li>
+                                    <li><b>Delete:</b>If You delete a department name in Department but This is
+                                        department employee is present in employee object so it's a delete error</li>
+                                </ol>
+                            </ol>
+                            <li><b>Aggregate function</b></li>
+                            <ol type="i">
+                                <li>we can find sum of whole object, count of whole object,etc  <b>using Aggregate function</b></li>
+                                <li>Sum()</li>
+                                <li>Count(),etc</li>
+                            </ol>
+                            <li><b>Validation Rule</b></li>
+                            <ol type="i">
+                                <li>If user enter the value so Validation rule find that value is correct syntax or not.</li>
+                            </ol>
+                            <li><b>Got an assignment</b></li>
+                            <li><b>Thank you - 28 feb- 2022</b></li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+                <div class="card" class="col-">
+                    <div class="p-3 mb-2 bg-warning text-dark">
+                        <div class="card-body">
+                            <h5 class="card-title">Salesforce training - 25-Feb-2022-Friday</h5>
+                            <p class="card-text">
+                            <ol>
+                                <h3>Today, I Learnt</h3>
+                                <li>Revision</li>
+                                <li>Create an App</li>
+                                <li>Create an Object ,field and relationship</li>
+                                <li>How to use field dependencies in projct.</li>
+                                <li>How to use a formula field?</li>
+                                <li>I learnt Predefined function</li>
+                                <li>How to display image using formula field?</li>
+                                <li>Got an assignment</li>
+                            </ol>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" class="col">
+                        <div class="p-3 mb-2 bg-danger text-white">
+                            <h5 class="card-title]">Salesforce training- 24-Feb-2022-Thursday</h5>
+                            <p class="card-text">
+                            <h3>What is cloud</h3>
+                            <ol>
+                                <li>Cloud are accessed over the Internet, and the software and databases that run on
+                                    those servers.</li>
+                                <h6>
+                                    <li> what type model service provider cloud?</li>
+                                </h6>
+                                <ol type="i">
+                                    <li>Software as a service (SaaS)</li>
+                                    <li> Platform as a Service (PaaS)</li>
+                                    <li>Infrastructure as a Service (IaaS)</li>
+                                </ol>
+                                <li>What is Cloud Computing?</li>
+                            </ol>
+                            <h3>What is CRM ?</h3>
+                            <ol>
+                                <li>CRM is customer relationship management.</li>
+                                <li>It's software that stores customer contact information</li>
+                            </ol>
+                            <h3>What is a Salesforce?</h3>
+                            <ol>
+                                <li>I Learnt why Salesforce is so important?</li>
+                                <li>How to bulid a project using Salesforce?</li>
+                                <li>I Learnt how to use object,Apps and Tabs?</li>
+                            </ol>
+                            <h3>Create a mini project:</h3>
+                            <ol>
+                                <li>Create a First mini Project using Salesforce</li>
+                                <li>Create a Object as Employee.</li>
+                                <li>Got an assignment</li>
+                            </ol>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        <div class="card" style="width: 30rem;">
-        <div class="p-3 mb-2 bg-danger text-white">
-            <h5 class="card-title">Salesforce training- 24-Feb-2022</h5>
-            <p class="card-text">
-                <h3>What is cloud</h3>
-                <ol>
-                    <li>Cloud are accessed over the Internet, and the software and databases that run on those servers.</li>
-                    <h6><li> what type model service provider cloud?</li></h6>
-                    <ol type="i">
-                        <li>Software as a service (SaaS)</li>
-                        <li> Platform as a Service (PaaS)</li>
-                        <li>Infrastructure as a Service (IaaS)</li>
-                    </ol>
-                    <li>What is Cloud Computing?</li>
-                </ol>
-                <h3>What is CRM ?</h3>
-                <ol>
-                    <li>CRM is customer relationship management.</li>
-                    <li>It's software that stores customer contact information</li>
-                </ol>
-                <h3>What is a Salesforce?</h3>
-                <ol >
-                    <li>I Learnt why Salesforce is so important?</li>
-                    <li>How to bulid a project using Salesforce?</li>
-                    <li>I Learnt how to use  object,Apps and Tabs?</li>
-                </ol>
-                <h3>Create a mini project:</h3>
-                <ol>
-                    <li>Create a First mini Project using Salesforce</li>
-                    <li>Create a Object as Employee.</li>
-                    <li>Got an assignment</li>
-                </ol>
-            </p>
-        </div>
-        </div>
-    </div>
 </body>
+
 </html>
