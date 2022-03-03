@@ -1,0 +1,16 @@
+body{
+    background-color: blue;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#car{
+    background-color:fuchsia
+}
+#car1{
+    background-color: aqua;
+}
+#car2{
+    background-color: aquamarine;
+}
