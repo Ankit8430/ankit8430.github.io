@@ -5,12 +5,9 @@ body{
     margin: 0px;
     padding: 0px;
 }
-#car{
-    background-color:fuchsia
+.car{
+    background-color:bisque;
 }
-#car1{
-    background-color: aqua;
-}
-#car2{
+.car1{
     background-color: aquamarine;
 }
