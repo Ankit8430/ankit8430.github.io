@@ -21,6 +21,33 @@
     <div class="container">
         <div class="row">
             <div class="card" class="col-">
+                <div class="car1">
+                    <div class="card-body">
+                        <h3 style="background-color: red;">Salesforce training - 5 Apr-2022-Day 19</h3>
+                        <ol>
+                            <li><b>Static resources :</b>allows you to upload content which we can use in VF pages ,aura classes, LWC</li>
+                            <li><b>Life cycle Hooks :</b>
+                            <ol type="i">
+                                <li><b>constructor () </b> no public property is available ,  It is called once in the whole life cycle of component … just like init method  -> after every refresh of the component this constructor will going to call.</li>
+                                <li><b> connectedCallback() -></b>is called when a component is added to the DOM. public properties are available here as constructor is called..component may not be visible completely </li>
+                                <li><b>renderedCallback() -></b>component is rendered to the browser.. This method is called multiple times ,depending upon ur business logic</li>
+                                <li><b>disconnectedCallback()-> </b> component removed from dom</li>
+                                <li><b>Render() -></b>is used to override the default rendering</li>
+                                <li><b>errorCallback() -> </b>Error thrown by the child and handle by the parent(with parent component will be having this errorCallBack(){})</li>
+                            </ol>
+                            </li>
+                            <li><b>Navigation in LWC :</b>Use the navigation service, lightning/navigation, to navigate to many different page types, like records, list views, and objects. Also use the navigation service to open files.
+                            <ol type="i">
+                                <li><b>Step 1:</b>import { NavigationMixin } from 'lightning/navigation';</li>
+                                <li><b>Step 2 :</b>export default class MyCustomElement extends NavigationMixin(LightningElement) {}</li>
+                                <li><b>Step 3 : </b>Create a plain JavaScript PageReference object that defines the page.</li>
+                                <li><b>Step 4:</b>To dispatch the navigation request, call the navigation service [NavigationMixin.Navigate](pageReferenceObject, [replace history]) function.</li>
+                            </ol>
+                            </li>
+                        </ol>
+                        <hr>
+                        <p><b>Thank You</b></p>
+                    </div>
                 <div class="car">
                     <div class="card-body">
                         <h3 style="background-color: red;">Salesforce training - 4 April-2022-Day 19</h3>
